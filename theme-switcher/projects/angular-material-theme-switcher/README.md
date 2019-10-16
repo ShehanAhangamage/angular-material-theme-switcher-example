@@ -66,7 +66,7 @@ Now you can add Theme Switchers and Theme Containers
 
 ### Theme Switchers
 
-There are two switchers to use according to your needs. You can call these component in your component's HTML file.
+There are two switchers to use according to your needs- You can call these component in your component's HTML file.
 
 #### Color Switcher
 
@@ -122,7 +122,7 @@ component.html
 
 ...
 
-    - Configure Library Color Themes should use or not. Default value is 'true'
+    - Configure Library Color Themes should use or not- Default value is 'true'
 
 component.html
 
@@ -192,7 +192,7 @@ component.html
 
 #### Dark Theme
 
-To apply current Active Dark theme. This container will not change with Dark Switcher.
+To apply current Active Dark theme- This container will not change with Dark Switcher.
 
 component.html
 
@@ -206,7 +206,7 @@ component.html
 
 #### Light Theme
 
-To apply current Light theme. This container will not change with Dark Switcher.
+To apply current Light theme- This container will not change with Dark Switcher.
 
 component.html
 
@@ -220,7 +220,7 @@ component.html
 
 #### Custom Theme
 
-To apply Custom theme. You must have to provide Color Theme name. Your theme is Dark or Not is optional. Default value is 'false'. It mean, whether you will did't set value for 'isDark', your theme will be Light.
+To apply Custom theme- You must have to provide Color Theme name- Your theme is Dark or Not is optional- Default value is 'false'- It mean, whether you will did't set value for 'isDark', your theme will be Light.
 
 * Light Custom Theme
 
@@ -248,7 +248,7 @@ component.html
 
 #### Theme Container
 
-Special directive to manage your theme. It is also like Active Theme, but also canfigure like Custome Theme.
+Special directive to manage your theme- It is also like Active Theme, but also canfigure like Custome Theme.
 
 * Like a Active Theme
 
@@ -292,7 +292,7 @@ component.html
 
 * Like Custom Theme
 
-This will use fixed  both Color Theme and Dark or Light Theme. And don't use states of your Theme Switchers.
+This will use fixed  both Color Theme and Dark or Light Theme- And don't use states of your Theme Switchers.
 
 component.html
 
@@ -306,7 +306,7 @@ component.html
 
 ## How make your Themes?
 
-It is so easy to make your theme. You only have to pass selected colors to the theme builder in 'styles.scss' file or your custom 'theme.scss' file, but you must have to import 'theme.scss' file into 'styles.scss' file.
+It is so easy to make your theme- You only have to pass selected colors to the theme builder in 'styles.scss' file or your custom 'theme.scss' file, but you must have to import 'theme.scss' file into 'styles.scss' file.
 
 * Basic use
 
@@ -365,169 +365,169 @@ $theme: (
 
 You can provide any of these or all of these build your Advance Themes.
 
-light-background
+- light-background
 
-    dark-background
+- dark-background
 
-light-background-status-bar
+- light-background-status-bar
 
-    dark-background-status-bar
+- dark-background-status-bar
 
-light-background-app-bar
+- light-background-app-bar
 
-    dark-background-app-bar
+- dark-background-app-bar
 
-light-background-hover
+- light-background-hover
 
-    dark-background-hover
+- dark-background-hover
 
-light-background-card
+- light-background-card
 
-    dark-background-card
+- dark-background-card
 
-light-background-dialog
+- light-background-dialog
 
-    dark-background-dialog
+- dark-background-dialog
 
-light-background-disabled-button
+- light-background-disabled-button
 
-    dark-background-disabled-button
+- dark-background-disabled-button
 
-light-background-raised-button
+- light-background-raised-button
 
-    dark-background-raised-button
+- dark-background-raised-button
 
-light-background-focused-button
+- light-background-focused-button
 
-    dark-background-focused-button
+- dark-background-focused-button
 
-light-background-selected-button
+- light-background-selected-button
 
-    dark-background-selected-button
+- dark-background-selected-button
 
-light-background-selected-disabled-button
+- light-background-selected-disabled-button
 
-    dark-background-selected-disabled-button
+- dark-background-selected-disabled-button
 
-light-background-disabled-button-toggle
+- light-background-disabled-button-toggle
 
-    dark-background-disabled-button-toggle
+- dark-background-disabled-button-toggle
 
-light-background-unselected-chip
+- light-background-unselected-chip
 
-    dark-background-unselected-chip
+- dark-background-unselected-chip
     
 
-light-background-disabled-list-option
+- light-background-disabled-list-option
 
-    dark-background-disabled-list-option
+- dark-background-disabled-list-option
 
-light-foreground-base
+- light-foreground-base
 
-    dark-foreground-base
+- dark-foreground-base
 
-light-foreground-divider
+- light-foreground-divider
 
-    dark-foreground-divider
+- dark-foreground-divider
 
-light-foreground-dividers
+- light-foreground-dividers
 
-    dark-foreground-dividers
+- dark-foreground-dividers
 
-light-foreground-disabled
+- light-foreground-disabled
 
-    dark-foreground-disabled
+- dark-foreground-disabled
 
-light-foreground-disabled-button
+- light-foreground-disabled-button
 
-    dark-foreground-disabled-button
+- dark-foreground-disabled-button
 
-light-foreground-disabled-text
+- light-foreground-disabled-text
 
-     dark-foreground-disabled-text
+ - dark-foreground-disabled-text
 
-light-foreground-elevation
+- light-foreground-elevation
 
-    dark-foreground-elevation
+- dark-foreground-elevation
 
-light-foreground-hint-text
+- light-foreground-hint-text
 
-    dark-foreground-hint-text
+- dark-foreground-hint-text
 
-light-foreground-secondary-text
+- light-foreground-secondary-text
 
-    dark-foreground-secondary-text
+- dark-foreground-secondary-text
 
-light-foreground-icon
+- light-foreground-icon
 
-    dark-foreground-icon
+- dark-foreground-icon
 
-light-foreground-icons
+- light-foreground-icons
 
-    dark-foreground-icons
+- dark-foreground-icons
 
-light-foreground-text
+- light-foreground-text
 
-    dark-foreground-text
+- dark-foreground-text
 
-light-foreground-slider-min
+- light-foreground-slider-min
 
-    dark-foreground-slider-min
+- dark-foreground-slider-min
 
-light-foreground-slider-off
+- light-foreground-slider-off
 
-    dark-foreground-slider-off
+- dark-foreground-slider-off
     
 
-light-foreground-slider-off-active
+- light-foreground-slider-off-active
 
-    dark-foreground-slider-off-active
+- dark-foreground-slider-off-active
 
 ## Additional Gift
 
-How is nice you can use these themes for your None Angular Material html elemants. It is easy. You can use following 'css' classes to them.
+How is nice you can use these themes for your None Angular Material html elemants- It is easy- You can use following 'css' classes to them.
 
 * Background colors
 
-  .primary-background 
-  .accent-background 
-  .warn-background 
+  - primary-background 
+  - accent-background 
+  - warn-background 
 
-  .status-bar-background 
-  .app-bar-background 
-  .background-background 
-  .hover-background 
-  .card-background 
-  .dialog-background 
-  .disabled-button-background 
-  .raised-button-background 
-  .focused-button-background 
-  .selected-button-background 
-  .selected-disabled-button-background 
-  .disabled-button-toggle-background
-  .unselected-chip-background 
-  .disabled-list-option-background 
+  - status-bar-background 
+  - app-bar-background 
+  - background-background 
+  - hover-background 
+  - card-background 
+  - dialog-background 
+  - disabled-button-background 
+  - raised-button-background 
+  - focused-button-background 
+  - selected-button-background 
+  - selected-disabled-button-background 
+  - disabled-button-toggle-background
+  - unselected-chip-background 
+  - disabled-list-option-background 
   
 
 * Foreground and Text colors
 
-  .primary-color 
-  .accent-color 
-  .warn-color 
+  - primary-color 
+  - accent-color 
+  - warn-color 
   
-  .base-color 
-  .divider-color 
-  .dividers-color 
-  .disabled-color 
-  .disabled-button-color 
-  .disabled-text-color 
-  .elevation-color 
-  .hint-text-color 
-  .secondary-text-color 
-  .icon-color
-  .icons-color 
-  .text-color 
-  .slider-min-color 
-  .slider-off-color 
-  .slider-off-active-color 
+  - base-color 
+  - divider-color 
+  - dividers-color 
+  - disabled-color 
+  - disabled-button-color 
+  - disabled-text-color 
+  - elevation-color 
+  - hint-text-color 
+  - secondary-text-color 
+  - icon-color
+  - icons-color 
+  - text-color 
+  - slider-min-color 
+  - slider-off-color 
+  - slider-off-active-color 
 
