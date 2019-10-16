@@ -1,6 +1,25 @@
 {
-  "name": "angular-material-theme-switcher",
-  "version": "0.0.1",
+  "name": "@sheyxneo/angular-material-theme-switcher",
+  "version": "1.0.0",
+  "description": "This library will help you to use multiple themes and easily switch between them in your project.",
+  "author": "SheyXNeo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SheyXNeo/angular-material-theme-switcher.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SheyXNeo/angular-material-theme-switcher/issues"
+  },
+  "homepage": "https://sheyxneo.github.io/angular-material-theme-switcher/",
+  "keywords": [
+    "angular-material",
+    "angular-material-theme",
+    "angular-material-theme-switcher",
+    "material-theme-switcher",
+    "theme-switcher",
+    "material-theme"
+  ],
+  "license": "MIT",
   "peerDependencies": {
     "@angular/common": "^8.2.9",
     "@angular/core": "^8.2.9"
