@@ -1,8 +1,11 @@
 {
   "name": "@sheyxneo/angular-material-theme-switcher",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This library will help you to use multiple themes and easily switch between them in your project.",
-  "author": "SheyXNeo",
+  "author": {
+    "name": "SheyXNeo",
+    "email": "asahangamageshehan@gmail.com"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/SheyXNeo/angular-material-theme-switcher.git"

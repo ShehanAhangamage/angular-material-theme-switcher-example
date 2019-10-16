@@ -1,6 +1,6 @@
 # Angular Material Theme Switcher
 
-This library will help to your project to use multiple themes and easily switch between them.
+This library will help you to use multiple themes and easily switch between them in your project.
 
 ## Requirement
 
@@ -8,37 +8,37 @@ This library will help to your project to use multiple themes and easily switch 
 
 Example : 
 
-...
+``` bash
 
 ng new Example-Project --style scss
 
-...
+```
 
 * Install [Angular Material](https://material.angular.io/) in your project
 
-...
+``` bash
 
 ng add @angular/material
 
-...
+```
 
 ## How to install?
 
 You can NPM to install this library in your project.
 
-...
+``` bash
 
 npm install @sheyxneo/angular-material-theme-switcher
 
-...
+```
 
 or
 
-...
+``` bash
 
 npm i @sheyxneo/angular-material-theme-switcher
 
-...
+```
 
 ## How to use?
 
@@ -46,21 +46,21 @@ Firstly you have to import Library in the your module
 
 * .module
 
-...
-
-import { AngularMaterialThemeSwitcherModule } from '@sheyxneo/angular-material-theme-switcher'; 
-
-...
+``` javascript
+import {
+    AngularMaterialThemeSwitcherModule
+} from '@sheyxneo/angular-material-theme-switcher';
+```
 
 Then import theme in styles.scss
 
 * styles.scss
 
-...
+``` scss
 
 @import '~@sheyxneo/angular-material-theme-switcher/am-theme'; 
 
-...
+```
 
 Now you can add Theme Switchers and Theme Containers
 
@@ -76,11 +76,9 @@ Switcher to switch color theme of your project.
 
 component.html
 
-...
-
+``` html
 <am-theme-color-switcher></am-theme-color-switcher>
-
-...
+```
 
 * Advance Configuration
 
@@ -88,49 +86,39 @@ component.html
 
 component.html
 
-...
-
+``` html
 <am-theme-color-switcher colorTheme="color-theme-name"></am-theme-color-switcher>
-
-...
+```
 
     - Provide your Color Themes
 
 component.html
 
-...
-
+``` html
 <am-theme-color-switcher [themes]="['color-theme-name']"></am-theme-color-switcher>
-
-...
+```
 
 or
 
 component.ts
 
-...
-
-themes = ['indigo-green']; 
-
-...
+``` javascript
+themes = ['indigo-green'];
+```
 
 component.html
 
-...
-
+``` html
 <am-theme-color-switcher [themes]="themes"></am-theme-color-switcher>
-
-...
+```
 
     - Configure Library Color Themes should use or not- Default value is 'true'
 
 component.html
 
-...
-
+``` html
 <am-theme-color-switcher [isUseLibraryThemes]="false"></am-theme-color-switcher>
-
-...
+```
 
 #### Dark Switcher
 
@@ -140,11 +128,9 @@ Switch to Dark or Light
 
 component.html
 
-...
-
+``` html
 <am-theme-dark-switcher></am-theme-dark-switcher>
-
-...
+```
 
 * Advance Configuration
 
@@ -152,11 +138,9 @@ component.html
 
 component.html
 
-...
-
+``` html
 <am-theme-dark-switcher [isDark]="true"></am-theme-dark-switcher>
-
-...
+```
 
 ### Theme Container
 
@@ -168,13 +152,11 @@ Exapmle :
 
 component.html
 
-...
-
+``` html
 <div amThemeDirective>
- ........
+    ...
 </div>
-
-...
+```
 
 #### Active Theme
 
@@ -182,13 +164,11 @@ To apply current Active theme.
 
 component.html
 
-...
-
+``` html
 <div amThemeActive>
- ........
+    ...
 </div>
-
-...
+```
 
 #### Dark Theme
 
@@ -196,13 +176,11 @@ To apply current Active Dark theme- This container will not change with Dark Swi
 
 component.html
 
-...
-
+``` html
 <div amThemeDark>
- ........
+    ...
 </div>
-
-...
+```
 
 #### Light Theme
 
@@ -210,13 +188,11 @@ To apply current Light theme- This container will not change with Dark Switcher.
 
 component.html
 
-...
-
+``` html
 <div amThemeLight>
- ........
+    ...
 </div>
-
-...
+```
 
 #### Custom Theme
 
@@ -226,25 +202,21 @@ To apply Custom theme- You must have to provide Color Theme name- Your theme is 
 
 component.html
 
-...
-
+``` html
 <div amThemeCustom colorTheme="indigo-pink">
- ........
+    ...
 </div>
-
-...
+```
 
 * Dark Custom Theme
 
 component.html
 
-...
-
-<div amThemeCustom colorTheme="indigo-pink" [isDark]="true>
- ........
+``` html
+<div amThemeCustom colorTheme="indigo-pink" [isDark]="true">
+ ...
 </div>
-
-...
+```
 
 #### Theme Container
 
@@ -256,10 +228,9 @@ This will use states of your Theme Switchers.
 
 component.html
 
-...
-
+``` html
 <div amThemeContainer>
- ........
+    ...
 </div>
 
 * Fixed Color Theme
@@ -268,13 +239,12 @@ This will use fixed Color Theme and state of your Dark Switcher.
 
 component.html
 
-...
+```html
 
 <div amThemeContainer colorTheme="indigo-pink">
- ........
+    ...
 </div>
-
-...
+```
 
 * Fixed Dark or Light Theme
 
@@ -282,13 +252,11 @@ This will use fixed Dark or Light Theme and state of your Color Switcher.
 
 component.html
 
-...
-
+``` html
 <div amThemeContainer [isDark]="true">
- ........
+    ...
 </div>
-
-...
+```
 
 * Like Custom Theme
 
@@ -296,13 +264,11 @@ This will use fixed  both Color Theme and Dark or Light Theme- And don't use sta
 
 component.html
 
-...
-
+``` html
 <div amThemeContainer colorTheme="indigo-pink" [isDark]="true">
- ........
+    ...
 </div>
-
-...
+```
 
 ## How make your Themes?
 
@@ -314,9 +280,9 @@ You can make theme providing primary, accent and warn color.
 
 styles.scss
 
-...
+``` scss
 
-...........
+...
 
 @import "~@angular/material/theming"; 
 
@@ -357,131 +323,133 @@ $theme: (
 
 @include am-theme($theme); 
 
-...........
-
 ...
+
+```
 
 * Advance use
 
 You can provide any of these or all of these build your Advance Themes.
 
-- light-background
+* light-background
 
-- dark-background
+* dark-background
 
-- light-background-status-bar
+* light-background-status-bar
 
-- dark-background-status-bar
+* dark-background-status-bar
 
-- light-background-app-bar
+* light-background-app-bar
 
-- dark-background-app-bar
+* dark-background-app-bar
 
-- light-background-hover
+* light-background-hover
 
-- dark-background-hover
+* dark-background-hover
 
-- light-background-card
+* light-background-card
 
-- dark-background-card
+* dark-background-card
 
-- light-background-dialog
+* light-background-dialog
 
-- dark-background-dialog
+* dark-background-dialog
 
-- light-background-disabled-button
+* light-background-disabled-button
 
-- dark-background-disabled-button
+* dark-background-disabled-button
 
-- light-background-raised-button
+* light-background-raised-button
 
-- dark-background-raised-button
+* dark-background-raised-button
 
-- light-background-focused-button
+* light-background-focused-button
 
-- dark-background-focused-button
+* dark-background-focused-button
 
-- light-background-selected-button
+* light-background-selected-button
 
-- dark-background-selected-button
+* dark-background-selected-button
 
-- light-background-selected-disabled-button
+* light-background-selected-disabled-button
 
-- dark-background-selected-disabled-button
+* dark-background-selected-disabled-button
 
-- light-background-disabled-button-toggle
+* light-background-disabled-button-toggle
 
-- dark-background-disabled-button-toggle
+* dark-background-disabled-button-toggle
 
-- light-background-unselected-chip
+* light-background-unselected-chip
 
-- dark-background-unselected-chip
+* dark-background-unselected-chip
+
     
 
-- light-background-disabled-list-option
+* light-background-disabled-list-option
 
-- dark-background-disabled-list-option
+* dark-background-disabled-list-option
 
-- light-foreground-base
+* light-foreground-base
 
-- dark-foreground-base
+* dark-foreground-base
 
-- light-foreground-divider
+* light-foreground-divider
 
-- dark-foreground-divider
+* dark-foreground-divider
 
-- light-foreground-dividers
+* light-foreground-dividers
 
-- dark-foreground-dividers
+* dark-foreground-dividers
 
-- light-foreground-disabled
+* light-foreground-disabled
 
-- dark-foreground-disabled
+* dark-foreground-disabled
 
-- light-foreground-disabled-button
+* light-foreground-disabled-button
 
-- dark-foreground-disabled-button
+* dark-foreground-disabled-button
 
-- light-foreground-disabled-text
+* light-foreground-disabled-text
 
  - dark-foreground-disabled-text
 
-- light-foreground-elevation
+* light-foreground-elevation
 
-- dark-foreground-elevation
+* dark-foreground-elevation
 
-- light-foreground-hint-text
+* light-foreground-hint-text
 
-- dark-foreground-hint-text
+* dark-foreground-hint-text
 
-- light-foreground-secondary-text
+* light-foreground-secondary-text
 
-- dark-foreground-secondary-text
+* dark-foreground-secondary-text
 
-- light-foreground-icon
+* light-foreground-icon
 
-- dark-foreground-icon
+* dark-foreground-icon
 
-- light-foreground-icons
+* light-foreground-icons
 
-- dark-foreground-icons
+* dark-foreground-icons
 
-- light-foreground-text
+* light-foreground-text
 
-- dark-foreground-text
+* dark-foreground-text
 
-- light-foreground-slider-min
+* light-foreground-slider-min
 
-- dark-foreground-slider-min
+* dark-foreground-slider-min
 
-- light-foreground-slider-off
+* light-foreground-slider-off
 
-- dark-foreground-slider-off
+* dark-foreground-slider-off
+
     
 
-- light-foreground-slider-off-active
+* light-foreground-slider-off-active
 
-- dark-foreground-slider-off-active
+* dark-foreground-slider-off-active
 
 ## Additional Gift
 
@@ -489,45 +457,48 @@ How is nice you can use these themes for your None Angular Material html elemant
 
 * Background colors
 
-  - primary-background 
-  - accent-background 
-  - warn-background 
+  + primary-background 
+  + accent-background 
+  + warn-background 
 
-  - status-bar-background 
-  - app-bar-background 
-  - background-background 
-  - hover-background 
-  - card-background 
-  - dialog-background 
-  - disabled-button-background 
-  - raised-button-background 
-  - focused-button-background 
-  - selected-button-background 
-  - selected-disabled-button-background 
-  - disabled-button-toggle-background
-  - unselected-chip-background 
-  - disabled-list-option-background 
+  + status-bar-background 
+  + app-bar-background 
+  + background-background 
+  + hover-background 
+  + card-background 
+  + dialog-background 
+  + disabled-button-background 
+  + raised-button-background 
+  + focused-button-background 
+  + selected-button-background 
+  + selected-disabled-button-background 
+  + disabled-button-toggle-background
+  + unselected-chip-background 
+  + disabled-list-option-background 
+
   
 
 * Foreground and Text colors
 
-  - primary-color 
-  - accent-color 
-  - warn-color 
+  + primary-color 
+  + accent-color 
+  + warn-color 
+
   
-  - base-color 
-  - divider-color 
-  - dividers-color 
-  - disabled-color 
-  - disabled-button-color 
-  - disabled-text-color 
-  - elevation-color 
-  - hint-text-color 
-  - secondary-text-color 
-  - icon-color
-  - icons-color 
-  - text-color 
-  - slider-min-color 
-  - slider-off-color 
-  - slider-off-active-color 
+
+  + base-color 
+  + divider-color 
+  + dividers-color 
+  + disabled-color 
+  + disabled-button-color 
+  + disabled-text-color 
+  + elevation-color 
+  + hint-text-color 
+  + secondary-text-color 
+  + icon-color
+  + icons-color 
+  + text-color 
+  + slider-min-color 
+  + slider-off-color 
+  + slider-off-active-color 
 

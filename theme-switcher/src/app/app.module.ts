@@ -6,7 +6,8 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 
 import { AngularMaterialModule } from './angular-material.module';
 
-import { AngularMaterialThemeSwitcherModule } from 'angular-material-theme-switcher';
+//import { AngularMaterialThemeSwitcherModule } from 'angular-material-theme-switcher';
+import { AngularMaterialThemeSwitcherModule } from '@sheyxneo/angular-material-theme-switcher';
 
 import { AppComponent } from './app.component';
 

@@ -29,7 +29,7 @@ $theme-switcher-theme: mat-light-theme($theme-switcher-primary, $theme-switcher-
 /* You can add global styles to this file, and also import other style files */
 
 //angular-material-theme-switcher
-@import '../projects/angular-material-theme-switcher/src/lib/am-theme';
+@import '~@sheyxneo/angular-material-theme-switcher/am-theme';
 
 $theme: (
   indigo-green: (
