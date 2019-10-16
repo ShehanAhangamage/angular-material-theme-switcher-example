@@ -1,0 +1,5 @@
+@import "./mat-theme-builder";
+
+@mixin theme-builder($theme) {
+  @include mat-theme-builder($theme);
+}

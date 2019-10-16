@@ -1,0 +1,6 @@
+@import "./style/theme";
+@import "./style/theme-builder";
+
+@mixin am-theme($theme) {
+  @include theme-builder($theme);
+}

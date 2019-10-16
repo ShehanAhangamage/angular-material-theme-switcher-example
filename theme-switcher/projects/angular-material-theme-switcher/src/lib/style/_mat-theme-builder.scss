@@ -1,0 +1,470 @@
+@import './none-mat-theme-builder';
+
+@mixin mat-theme-builder($themes) {
+
+  @each $theme-class, $theme in $themes {
+
+    $primary: if(map-has-key($theme, primary), map-get($theme, primary), mat-palette($mat-indigo));
+    $accent: if(map-has-key($theme, accent), map-get($theme, accent), mat-palette($mat-pink));
+    $warn: if(map-has-key($theme, warn), map-get($theme, warn), mat-palette($mat-red));
+
+    $light-background: if(map-has-key($theme, light-background), map-get($theme, light-background), '');
+    $dark-background: if(map-has-key($theme, dark-background), map-get($theme, dark-background), '');
+
+    $light-background-status-bar: if(map-has-key($theme, light-background-status-bar), map-get($theme, light-background-status-bar), '');
+    $dark-background-status-bar: if(map-has-key($theme, dark-background-status-bar), map-get($theme, dark-background-status-bar), '');
+
+    $light-background-app-bar: if(map-has-key($theme, light-background-app-bar), map-get($theme, light-background-app-bar), '');
+    $dark-background-app-bar: if(map-has-key($theme, dark-background-app-bar), map-get($theme, dark-background-app-bar), '');
+
+    $light-background-hover: if(map-has-key($theme, light-background-hover), map-get($theme, light-background-hover), '');
+    $dark-background-hover: if(map-has-key($theme, dark-background-hover), map-get($theme, dark-background-hover), '');
+
+    $light-background-card: if(map-has-key($theme, light-background-card), map-get($theme, light-background-card), '');
+    $dark-background-card: if(map-has-key($theme, dark-background-card), map-get($theme, dark-background-card), '');
+
+    $light-background-dialog: if(map-has-key($theme, light-background-dialog), map-get($theme, light-background-dialog), '');
+    $dark-background-dialog: if(map-has-key($theme, dark-background-dialog), map-get($theme, dark-background-dialog), '');
+
+    $light-background-disabled-button: if(map-has-key($theme, light-background-disabled-button), map-get($theme, light-background-disabled-button), '');
+    $dark-background-disabled-button: if(map-has-key($theme, dark-background-disabled-button), map-get($theme, dark-background-disabled-button), '');
+
+    $light-background-raised-button: if(map-has-key($theme, light-background-raised-button), map-get($theme, light-background-raised-button), '');
+    $dark-background-raised-button: if(map-has-key($theme, dark-background-raised-button), map-get($theme, dark-background-raised-button), '');
+
+    $light-background-focused-button: if(map-has-key($theme, light-background-focused-button), map-get($theme, light-background-focused-button), '');
+    $dark-background-focused-button: if(map-has-key($theme, dark-background-focused-button), map-get($theme, dark-background-focused-button), '');
+
+    $light-background-selected-button: if(map-has-key($theme, light-background-selected-button), map-get($theme, light-background-selected-button), '');
+    $dark-background-selected-button: if(map-has-key($theme, dark-background-selected-button), map-get($theme, dark-background-selected-button), '');
+
+    $light-background-selected-disabled-button: if(map-has-key($theme, light-background-selected-disabled-button), map-get($theme, light-background-selected-disabled-button), '');
+    $dark-background-selected-disabled-button: if(map-has-key($theme, dark-background-selected-disabled-button), map-get($theme, dark-background-selected-disabled-button), '');
+
+    $light-background-disabled-button-toggle: if(map-has-key($theme, light-background-disabled-button-toggle), map-get($theme, light-background-disabled-button-toggle), '');
+    $dark-background-disabled-button-toggle: if(map-has-key($theme, dark-background-disabled-button-toggle), map-get($theme, dark-background-disabled-button-toggle), '');
+
+    $light-background-unselected-chip: if(map-has-key($theme, light-background-unselected-chip), map-get($theme, light-background-unselected-chip), '');
+    $dark-background-unselected-chip: if(map-has-key($theme, dark-background-unselected-chip), map-get($theme, dark-background-unselected-chip), '');
+
+    $light-background-disabled-list-option: if(map-has-key($theme, light-background-disabled-list-option), map-get($theme, light-background-disabled-list-option), '');
+    $dark-background-disabled-list-option: if(map-has-key($theme, dark-background-disabled-list-option), map-get($theme, dark-background-disabled-list-option), '');
+
+    $light-foreground-base: if(map-has-key($theme, light-foreground-base), map-get($theme, light-foreground-base), '');
+    $dark-foreground-base: if(map-has-key($theme, dark-foreground-base), map-get($theme, dark-foreground-base), '');
+
+    $light-foreground-divider: if(map-has-key($theme, light-foreground-divider), map-get($theme, light-foreground-divider), '');
+    $dark-foreground-divider: if(map-has-key($theme, dark-foreground-divider), map-get($theme, dark-foreground-divider), '');
+
+    $light-foreground-dividers: if(map-has-key($theme, light-foreground-dividers), map-get($theme, light-foreground-dividers), '');
+    $dark-foreground-dividers: if(map-has-key($theme, dark-foreground-dividers), map-get($theme, dark-foreground-dividers), '');
+
+    $light-foreground-disabled: if(map-has-key($theme, light-foreground-disabled), map-get($theme, light-foreground-disabled), '');
+    $dark-foreground-disabled: if(map-has-key($theme, dark-foreground-disabled), map-get($theme, dark-foreground-disabled), '');
+
+    $light-foreground-disabled-button: if(map-has-key($theme, light-foreground-disabled-button), map-get($theme, light-foreground-disabled-button), '');
+    $dark-foreground-disabled-button: if(map-has-key($theme, dark-foreground-disabled-button), map-get($theme, dark-foreground-disabled-button), '');
+
+    $light-foreground-disabled-text: if(map-has-key($theme, light-foreground-disabled-text), map-get($theme, light-foreground-disabled-text), '');
+    $dark-foreground-disabled-text: if(map-has-key($theme, dark-foreground-disabled-text), map-get($theme, dark-foreground-disabled-text), '');
+
+    $light-foreground-elevation: if(map-has-key($theme, light-foreground-elevation), map-get($theme, light-foreground-elevation), '');
+    $dark-foreground-elevation: if(map-has-key($theme, dark-foreground-elevation), map-get($theme, dark-foreground-elevation), '');
+
+    $light-foreground-hint-text: if(map-has-key($theme, light-foreground-hint-text), map-get($theme, light-foreground-hint-text), '');
+    $dark-foreground-hint-text: if(map-has-key($theme, dark-foreground-hint-text), map-get($theme, dark-foreground-hint-text), '');
+
+    $light-foreground-secondary-text: if(map-has-key($theme, light-foreground-secondary-text), map-get($theme, light-foreground-secondary-text), '');
+    $dark-foreground-secondary-text: if(map-has-key($theme, dark-foreground-secondary-text), map-get($theme, dark-foreground-secondary-text), '');
+
+    $light-foreground-icon: if(map-has-key($theme, light-foreground-icon), map-get($theme, light-foreground-icon), '');
+    $dark-foreground-icon: if(map-has-key($theme, dark-foreground-icon), map-get($theme, dark-foreground-icon), '');
+
+    $light-foreground-icons: if(map-has-key($theme, light-foreground-icons), map-get($theme, light-foreground-icons), '');
+    $dark-foreground-icons: if(map-has-key($theme, dark-foreground-icons), map-get($theme, dark-foreground-icons), '');
+
+    $light-foreground-text: if(map-has-key($theme, light-foreground-text), map-get($theme, light-foreground-text), '');
+    $dark-foreground-text: if(map-has-key($theme, dark-foreground-text), map-get($theme, dark-foreground-text), '');
+
+    $light-foreground-slider-min: if(map-has-key($theme, light-foreground-slider-min), map-get($theme, light-foreground-slider-min), '');
+    $dark-foreground-slider-min: if(map-has-key($theme, dark-foreground-slider-min), map-get($theme, dark-foreground-slider-min), '');
+
+    $light-foreground-slider-off: if(map-has-key($theme, light-foreground-slider-off), map-get($theme, light-foreground-slider-off), '');
+    $dark-foreground-slider-off: if(map-has-key($theme, dark-foreground-slider-off), map-get($theme, dark-foreground-slider-off), '');
+
+    $light-foreground-slider-off-active: if(map-has-key($theme, light-foreground-slider-off-active), map-get($theme, light-foreground-slider-off-active), '');
+    $dark-foreground-slider-off-active: if(map-has-key($theme, dark-foreground-slider-off-active), map-get($theme, dark-foreground-slider-off-active), '');
+
+    $mat-light-theme: mat-light-theme($primary, $accent, $warn);
+
+      @if $light-background != ''{
+        $background: map-get($mat-light-theme, background);
+        $background: map_merge($background, (background: $light-background));
+        $mat-light-theme: map_merge($mat-light-theme, (background: $background));
+      }
+
+      @if $light-background-status-bar != ''{
+        $background: map-get($mat-light-theme, background);
+        $background: map_merge($background, (status-bar: $light-background-status-bar));
+        $mat-light-theme: map_merge($mat-light-theme, (background: $background));
+      }
+
+      @if $light-background-app-bar != ''{
+        $background: map-get($mat-light-theme, background);
+        $background: map_merge($background, (app-bar: $light-background-app-bar));
+        $mat-light-theme: map_merge($mat-light-theme, (background: $background));
+      }
+
+      @if $light-background-hover != ''{
+        $background: map-get($mat-light-theme, background);
+        $background: map_merge($background, (hover: $light-background-hover));
+        $mat-light-theme: map_merge($mat-light-theme, (background: $background));
+      }
+
+      @if $light-background-card != ''{
+        $background: map-get($mat-light-theme, background);
+        $background: map_merge($background, (card: $light-background-card));
+        $mat-light-theme: map_merge($mat-light-theme, (background: $background));
+      }
+
+      @if $light-background-dialog != ''{
+        $background: map-get($mat-light-theme, background);
+        $background: map_merge($background, (dialog: $light-background-dialog));
+        $mat-light-theme: map_merge($mat-light-theme, (background: $background));
+      }
+
+      @if $light-background-disabled-button != ''{
+        $background: map-get($mat-light-theme, background);
+        $background: map_merge($background, (disabled-button: $light-background-disabled-button));
+        $mat-light-theme: map_merge($mat-light-theme, (background: $background));
+      }
+
+      @if $light-background-raised-button != ''{
+        $background: map-get($mat-light-theme, background);
+        $background: map_merge($background, (raised-button: $light-background-raised-button));
+        $mat-light-theme: map_merge($mat-light-theme, (background: $background));
+      }
+
+      @if $light-background-focused-button != ''{
+        $background: map-get($mat-light-theme, background);
+        $background: map_merge($background, (focused-button: $light-background-focused-button));
+        $mat-light-theme: map_merge($mat-light-theme, (background: $background));
+      }
+
+      @if $light-background-selected-button != ''{
+        $background: map-get($mat-light-theme, background);
+        $background: map_merge($background, (selected-button: $light-background-selected-button));
+        $mat-light-theme: map_merge($mat-light-theme, (background: $background));
+      }
+
+      @if $light-background-selected-disabled-button != ''{
+        $background: map-get($mat-light-theme, background);
+        $background: map_merge($background, (selected-disabled-button: $light-background-selected-disabled-button));
+        $mat-light-theme: map_merge($mat-light-theme, (background: $background));
+      }
+
+      @if $light-background-disabled-button-toggle != ''{
+        $background: map-get($mat-light-theme, background);
+        $background: map_merge($background, (disabled-button-toggle: $light-background-disabled-button-toggle));
+        $mat-light-theme: map_merge($mat-light-theme, (background: $background));
+      }
+
+      @if $light-background-unselected-chip != ''{
+        $background: map-get($mat-light-theme, background);
+        $background: map_merge($background, (unselected-chip: $light-background-unselected-chip));
+        $mat-light-theme: map_merge($mat-light-theme, (background: $background));
+      }
+
+      @if $light-background-disabled-list-option != ''{
+        $background: map-get($mat-light-theme, background);
+        $background: map_merge($background, (disabled-list-option: $light-background-disabled-list-option));
+        $mat-light-theme: map_merge($mat-light-theme, (background: $background));
+      }
+
+      @if $light-foreground-base != '' {
+        $foreground: map-get($mat-light-theme, foreground);
+        $foreground: map_merge($foreground, (base: $light-foreground-base));
+        $mat-light-theme: map_merge($mat-light-theme, (foreground: $foreground));
+      }
+
+      @if $light-foreground-divider != ''{
+        $foreground: map-get($mat-light-theme, foreground);
+        $foreground: map_merge($foreground, (divider: $light-foreground-divider));
+        $mat-light-theme: map_merge($mat-light-theme, (foreground: $foreground));
+      }
+
+      @if $light-foreground-dividers != ''{
+        $foreground: map-get($mat-light-theme, foreground);
+        $foreground: map_merge($foreground, (dividers: $light-foreground-dividers));
+        $mat-light-theme: map_merge($mat-light-theme, (foreground: $foreground));
+      }
+
+      @if $light-foreground-disabled != ''{
+        $foreground: map-get($mat-light-theme, foreground);
+        $foreground: map_merge($foreground, (disabled: $light-foreground-disabled));
+        $mat-light-theme: map_merge($mat-light-theme, (foreground: $foreground));
+      }
+
+      @if $light-foreground-disabled-button != ''{
+        $foreground: map-get($mat-light-theme, foreground);
+        $foreground: map_merge($foreground, (disabled-button: $light-foreground-disabled-button));
+        $mat-light-theme: map_merge($mat-light-theme, (foreground: $foreground));
+      }
+
+      @if $light-foreground-disabled-text != ''{
+        $foreground: map-get($mat-light-theme, foreground);
+        $foreground: map_merge($foreground, (disabled-text: $light-foreground-disabled-text));
+        $mat-light-theme: map_merge($mat-light-theme, (foreground: $foreground));
+      }
+
+      @if $light-foreground-elevation != ''{
+        $foreground: map-get($mat-light-theme, foreground);
+        $foreground: map_merge($foreground, (elevation: $light-foreground-elevation));
+        $mat-light-theme: map_merge($mat-light-theme, (foreground: $foreground));
+      }
+
+      @if $light-foreground-hint-text != ''{
+        $foreground: map-get($mat-light-theme, foreground);
+        $foreground: map_merge($foreground, (hint-text: $light-foreground-hint-text));
+        $mat-light-theme: map_merge($mat-light-theme, (foreground: $foreground));
+      }
+
+      @if $light-foreground-secondary-text != ''{
+        $foreground: map-get($mat-light-theme, foreground);
+        $foreground: map_merge($foreground, (secondary-text: $light-foreground-secondary-text));
+        $mat-light-theme: map_merge($mat-light-theme, (foreground: $foreground));
+      }
+
+      @if $light-foreground-icon != ''{
+        $foreground: map-get($mat-light-theme, foreground);
+        $foreground: map_merge($foreground, (icon: $light-foreground-icon));
+        $mat-light-theme: map_merge($mat-light-theme, (foreground: $foreground));
+      }
+
+      @if $light-foreground-icons != ''{
+        $foreground: map-get($mat-light-theme, foreground);
+        $foreground: map_merge($foreground, (icons: $light-foreground-icons));
+        $mat-light-theme: map_merge($mat-light-theme, (foreground: $foreground));
+      }
+
+      @if $light-foreground-text != ''{
+        $foreground: map-get($mat-light-theme, foreground);
+        $foreground: map_merge($foreground, (text: $light-foreground-text));
+        $mat-light-theme: map_merge($mat-light-theme, (foreground: $foreground));
+      }
+
+      @if $light-foreground-slider-min != ''{
+        $foreground: map-get($mat-light-theme, foreground);
+        $foreground: map_merge($foreground, (slider-min: $light-foreground-slider-min));
+        $mat-light-theme: map_merge($mat-light-theme, (foreground: $foreground));
+      }
+
+      @if $light-foreground-slider-off != ''{
+        $foreground: map-get($mat-light-theme, foreground);
+        $foreground: map_merge($foreground, (slider-off: $light-foreground-slider-off));
+        $mat-light-theme: map_merge($mat-light-theme, (foreground: $foreground));
+      }
+
+      @if $light-foreground-slider-off-active != ''{
+        $foreground: map-get($mat-light-theme, foreground);
+        $foreground: map_merge($foreground, (slider-off-active: $light-foreground-slider-off-active));
+        $mat-light-theme: map_merge($mat-light-theme, (foreground: $foreground));
+      }
+
+    $mat-dark-theme: mat-dark-theme($primary, $accent, $warn);
+
+      @if $dark-background != ''{
+        $background: map-get($mat-dark-theme, background);
+        $background: map_merge($background, (background: $dark-background));
+        $mat-dark-theme: map_merge($mat-dark-theme, (background: $background));
+      }
+
+      @if $dark-background-status-bar != ''{
+        $background: map-get($mat-dark-theme, background);
+        $background: map_merge($background, (status-bar: $dark-background-status-bar));
+        $mat-dark-theme: map_merge($mat-dark-theme, (background: $background));
+      }
+
+      @if $dark-background-app-bar != ''{
+        $background: map-get($mat-dark-theme, background);
+        $background: map_merge($background, (app-bar: $dark-background-app-bar));
+        $mat-dark-theme: map_merge($mat-dark-theme, (background: $background));
+      }
+
+      @if $dark-background-hover != ''{
+        $background: map-get($mat-dark-theme, background);
+        $background: map_merge($background, (hover: $dark-background-hover));
+        $mat-dark-theme: map_merge($mat-dark-theme, (background: $background));
+      }
+
+      @if $dark-background-card != ''{
+        $background: map-get($mat-dark-theme, background);
+        $background: map_merge($background, (card: $dark-background-card));
+        $mat-dark-theme: map_merge($mat-dark-theme, (background: $background));
+      }
+
+      @if $dark-background-dialog != ''{
+        $background: map-get($mat-dark-theme, background);
+        $background: map_merge($background, (dialog: $dark-background-dialog));
+        $mat-dark-theme: map_merge($mat-dark-theme, (background: $background));
+      }
+
+      @if $dark-background-disabled-button != ''{
+        $background: map-get($mat-dark-theme, background);
+        $background: map_merge($background, (disabled-button: $dark-background-disabled-button));
+        $mat-dark-theme: map_merge($mat-dark-theme, (background: $background));
+      }
+
+      @if $dark-background-raised-button != ''{
+        $background: map-get($mat-dark-theme, background);
+        $background: map_merge($background, (raised-button: $dark-background-raised-button));
+        $mat-dark-theme: map_merge($mat-dark-theme, (background: $background));
+      }
+
+      @if $dark-background-focused-button != ''{
+        $background: map-get($mat-dark-theme, background);
+        $background: map_merge($background, (focused-button: $dark-background-focused-button));
+        $mat-dark-theme: map_merge($mat-dark-theme, (background: $background));
+      }
+
+      @if $dark-background-selected-button != ''{
+        $background: map-get($mat-dark-theme, background);
+        $background: map_merge($background, (selected-button: $dark-background-selected-button));
+        $mat-dark-theme: map_merge($mat-dark-theme, (background: $background));
+      }
+
+      @if $dark-background-selected-disabled-button != ''{
+        $background: map-get($mat-dark-theme, background);
+        $background: map_merge($background, (selected-disabled-button: $dark-background-selected-disabled-button));
+        $mat-dark-theme: map_merge($mat-dark-theme, (background: $background));
+      }
+
+      @if $dark-background-disabled-button-toggle != ''{
+        $background: map-get($mat-dark-theme, background);
+        $background: map_merge($background, (disabled-button-toggle: $dark-background-disabled-button-toggle));
+        $mat-dark-theme: map_merge($mat-dark-theme, (background: $background));
+      }
+
+      @if $dark-background-unselected-chip != ''{
+        $background: map-get($mat-dark-theme, background);
+        $background: map_merge($background, (unselected-chip: $dark-background-unselected-chip));
+        $mat-dark-theme: map_merge($mat-dark-theme, (background: $background));
+      }
+
+      @if $dark-background-disabled-list-option != ''{
+        $background: map-get($mat-dark-theme, background);
+        $background: map_merge($background, (disabled-list-option: $dark-background-disabled-list-option));
+        $mat-dark-theme: map_merge($mat-dark-theme, (background: $background));
+      }
+
+      @if $dark-foreground-base != '' {
+        $foreground: map-get($mat-dark-theme, foreground);
+        $foreground: map_merge($foreground, (base: $dark-foreground-base));
+        $mat-dark-theme: map_merge($mat-dark-theme, (foreground: $foreground));
+      }
+
+      @if $dark-foreground-divider != ''{
+        $foreground: map-get($mat-dark-theme, foreground);
+        $foreground: map_merge($foreground, (divider: $dark-foreground-divider));
+        $mat-dark-theme: map_merge($mat-dark-theme, (foreground: $foreground));
+      }
+
+      @if $dark-foreground-dividers != ''{
+        $foreground: map-get($mat-dark-theme, foreground);
+        $foreground: map_merge($foreground, (dividers: $dark-foreground-dividers));
+        $mat-dark-theme: map_merge($mat-dark-theme, (foreground: $foreground));
+      }
+
+      @if $dark-foreground-disabled != ''{
+        $foreground: map-get($mat-dark-theme, foreground);
+        $foreground: map_merge($foreground, (disabled: $dark-foreground-disabled));
+        $mat-dark-theme: map_merge($mat-dark-theme, (foreground: $foreground));
+      }
+
+      @if $dark-foreground-disabled-button != ''{
+        $foreground: map-get($mat-dark-theme, foreground);
+        $foreground: map_merge($foreground, (disabled-button: $dark-foreground-disabled-button));
+        $mat-dark-theme: map_merge($mat-dark-theme, (foreground: $foreground));
+      }
+
+      @if $dark-foreground-disabled-text != ''{
+        $foreground: map-get($mat-dark-theme, foreground);
+        $foreground: map_merge($foreground, (disabled-text: $dark-foreground-disabled-text));
+        $mat-dark-theme: map_merge($mat-dark-theme, (foreground: $foreground));
+      }
+
+      @if $dark-foreground-elevation != ''{
+        $foreground: map-get($mat-dark-theme, foreground);
+        $foreground: map_merge($foreground, (elevation: $dark-foreground-elevation));
+        $mat-dark-theme: map_merge($mat-dark-theme, (foreground: $foreground));
+      }
+
+      @if $dark-foreground-hint-text != ''{
+        $foreground: map-get($mat-dark-theme, foreground);
+        $foreground: map_merge($foreground, (hint-text: $dark-foreground-hint-text));
+        $mat-dark-theme: map_merge($mat-dark-theme, (foreground: $foreground));
+      }
+
+      @if $dark-foreground-secondary-text != ''{
+        $foreground: map-get($mat-dark-theme, foreground);
+        $foreground: map_merge($foreground, (secondary-text: $dark-foreground-secondary-text));
+        $mat-dark-theme: map_merge($mat-dark-theme, (foreground: $foreground));
+      }
+
+      @if $dark-foreground-icon != ''{
+        $foreground: map-get($mat-dark-theme, foreground);
+        $foreground: map_merge($foreground, (icon: $dark-foreground-icon));
+        $mat-dark-theme: map_merge($mat-dark-theme, (foreground: $foreground));
+      }
+
+      @if $dark-foreground-icons != ''{
+        $foreground: map-get($mat-dark-theme, foreground);
+        $foreground: map_merge($foreground, (icons: $dark-foreground-icons));
+        $mat-dark-theme: map_merge($mat-dark-theme, (foreground: $foreground));
+      }
+
+      @if $dark-foreground-text != ''{
+        $foreground: map-get($mat-dark-theme, foreground);
+        $foreground: map_merge($foreground, (text: $dark-foreground-text));
+        $mat-dark-theme: map_merge($mat-dark-theme, (foreground: $foreground));
+      }
+
+      @if $dark-foreground-slider-min != ''{
+        $foreground: map-get($mat-dark-theme, foreground);
+        $foreground: map_merge($foreground, (slider-min: $dark-foreground-slider-min));
+        $mat-dark-theme: map_merge($mat-dark-theme, (foreground: $foreground));
+      }
+
+      @if $dark-foreground-slider-off != ''{
+        $foreground: map-get($mat-dark-theme, foreground);
+        $foreground: map_merge($foreground, (slider-off: $dark-foreground-slider-off));
+        $mat-dark-theme: map_merge($mat-dark-theme, (foreground: $foreground));
+      }
+
+      @if $dark-foreground-slider-off-active != ''{
+        $foreground: map-get($mat-dark-theme, foreground);
+        $foreground: map_merge($foreground, (slider-off-active: $dark-foreground-slider-off-active));
+        $mat-dark-theme: map_merge($mat-dark-theme, (foreground: $foreground));
+      }
+
+    .#{$theme-class}-light {
+      @include angular-material-theme($mat-light-theme);
+      @include none-mat-theme-builder($mat-light-theme);
+    }
+
+    .#{$theme-class}-dark {
+      @include angular-material-theme($mat-dark-theme);
+      @include none-mat-theme-builder($mat-dark-theme);
+    }
+
+    .switcher-primary.#{$theme-class} {
+      background-color: mat-color($primary);
+    }
+    .switcher-accent.#{$theme-class} {
+      background-color: mat-color($accent);
+    }
+    .switcher-warn.#{$theme-class} {
+      background-color: mat-color($warn);
+    }
+  }
+}

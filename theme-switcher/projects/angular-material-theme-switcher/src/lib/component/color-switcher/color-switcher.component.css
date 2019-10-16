@@ -1,0 +1,51 @@
+.switcher-container {
+    width: 96px;
+    height: 96px;
+    margin: 0 8px;
+    padding: 0 !important;
+  }
+  
+  .switcher {
+    width: 48px;
+    min-width: 48px !important;
+    height: 48px;
+    padding: 0 !important;
+    position: relative;
+  }
+  
+  .switcher-primary {
+    width: 38px;
+    height: 38px;
+    margin: 5px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .switcher-accent {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+  }
+  
+  .switcher-warn {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .switcher-check {
+    color: white;
+    font-size: 28px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }

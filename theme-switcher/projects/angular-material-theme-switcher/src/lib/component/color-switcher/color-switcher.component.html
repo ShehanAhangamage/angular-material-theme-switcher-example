@@ -1,0 +1,18 @@
+<button *ngIf="themes.length > 1" mat-icon-button [mat-menu-trigger-for]="themeSwitcher" matTooltip="Switch themes"
+    tabindex="-1">
+    <mat-icon class="auto-flip">format_color_fill</mat-icon>
+</button>
+
+<mat-menu #themeSwitcher="matMenu">
+    <mat-grid-list cols="2" class="switcher-container">
+        <mat-grid-tile *ngFor="let theme of themes">
+            <button mat-button class="switcher" (click)="$event.stopPropagation(); setColorTheme(theme)">
+                <div [attr.class]="'switcher-primary ' + theme">
+                    <div [attr.class]="'switcher-accent ' + theme"></div>
+                    <div [attr.class]="'switcher-warn ' + theme"></div>
+                    <mat-icon *ngIf="colorTheme===theme" class="center switcher-check">brush</mat-icon>
+                </div>
+            </button>
+        </mat-grid-tile>
+    </mat-grid-list>
+</mat-menu>
