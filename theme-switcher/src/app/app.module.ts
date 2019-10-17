@@ -26,7 +26,6 @@ import { ContainerLightThemeComponent } from './component/container-light-theme/
 import { ContainerDarkThemeComponent } from './component/container-dark-theme/container-dark-theme.component';
 import { ContainerCustomThemeComponent } from './component/container-custom-theme/container-custom-theme.component';
 
-import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -49,8 +48,7 @@ import { AppRoutingModule } from './app-routing.module';
     MatIconModule,
     MatTabsModule,
     MatToolbarModule,
-    AngularMaterialThemeSwitcherModule,
-    AppRoutingModule
+    AngularMaterialThemeSwitcherModule
   ],
   providers: [],
   bootstrap: [AppComponent]

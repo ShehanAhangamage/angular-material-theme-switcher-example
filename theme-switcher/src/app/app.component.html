@@ -3,14 +3,48 @@
   <span class="mat-body-2">@sheyxneo/angular-material-theme-switcher</span>
 </mat-toolbar>
 
-<nav class="mat-app-background" mat-tab-nav-bar>
-  <a mat-tab-link *ngFor="let link of links" (click)="activeLink = link.path" [active]="activeLink == link.path"
-    [routerLink]="link.path">
-    {{link.label}}
-  </a>
-</nav>
-
-<router-outlet></router-outlet>
+<mat-tab-group>
+  <mat-tab label="Active Theme">
+    <ng-template matTabContent>
+      <app-active-theme></app-active-theme>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Dark Theme">
+    <ng-template matTabContent>
+      <app-dark-theme></app-dark-theme>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Light Theme">
+    <ng-template matTabContent>
+      <app-light-theme></app-light-theme>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Custom Theme">
+    <ng-template matTabContent>
+      <app-custom-theme></app-custom-theme>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Container Theme">
+    <ng-template matTabContent>
+      <app-container-theme></app-container-theme>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Container Dark Theme">
+    <ng-template matTabContent>
+      <app-container-dark-theme></app-container-dark-theme>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Container Light Theme">
+    <ng-template matTabContent>
+      <app-container-light-theme></app-container-light-theme>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Container Custom Theme">
+    <ng-template matTabContent>
+      <app-container-custom-theme></app-container-custom-theme>
+    </ng-template>
+  </mat-tab>
+</mat-tab-group>
 
 <mat-toolbar color="primary" fxLayout="column" fxLayoutAlign="center start">
   <span class="mat-small">Copyright &copy; SheyXneo | All rights reserved</span>
